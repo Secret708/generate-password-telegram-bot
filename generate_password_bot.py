@@ -17,7 +17,7 @@ async def gen_pass_ult(number=12): # генерация модифицирова
     password = ''.join(secrets.choice(chars) for i in range(number))
     return password
 
-async def gen_pass(number=12): #
+async def gen_pass(number=12): # генерация обычного пароля
     chars = string.ascii_letters + string.digits
     password = ''.join(secrets.choice(chars) for i in range(number))
     return password
@@ -61,4 +61,5 @@ async def main(): # главный цикл программы
             await asyncio.sleep(3)
 
 if __name__ == '__main__':
+
     asyncio.run(main())
